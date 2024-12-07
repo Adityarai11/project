@@ -1,3 +1,4 @@
+// src/components/Envelope.tsx
 import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
 import { EnvelopeFront } from './EnvelopeFront';
@@ -30,12 +31,6 @@ export function Envelope({ onOpen, ...props }: EnvelopeProps) {
           isOpen ? 'translate-y-[-100px]' : ''
         } ${isHidden ? 'opacity-0 translate-y-[-200px]' : ''}`}
       >
-        {/* Wedding Details Card */}
-        <WeddingDetails
-          isRevealed={isHidden}
-          details={props}
-        />
-
         {/* Envelope Back with Flap */}
         <EnvelopeBack isOpen={isOpen} onClick={handleEnvelopeClick} />
 
@@ -45,6 +40,14 @@ export function Envelope({ onOpen, ...props }: EnvelopeProps) {
           <p className="text-lg font-serif text-[#704214] mt-4">Wedding Invitation</p>
           <p className="text-sm text-[#8b4513] mt-2 italic">Click to open</p>
         </EnvelopeFront>
+
+        {/* Wedding Details Card - Only show when envelope is open */}
+        {isOpen && (
+          <WeddingDetails
+            isRevealed={isHidden}
+            details={props}
+          />
+        )}
       </div>
     </div>
   );
