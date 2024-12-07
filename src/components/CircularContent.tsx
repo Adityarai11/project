@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flower2 } from 'lucide-react';
-
+import { image1 } from '../img/Lord ganesh.jpg';
 interface CircularContentProps {
   brideNames: string;
   groomNames: string;
@@ -14,7 +14,7 @@ export function CircularContent({ brideNames, groomNames, isVisible }: CircularC
     }`}>
       <div className="flex justify-center mb-6">
         <img 
-          src="https://images.unsplash.com/photo-1582126892906-5ba111b4f218?auto=format&fit=crop&q=80&w=200&h=200" 
+          src="Lord ganesh.jpg"
           alt="Divine Blessing" 
           className="w-40 h-40 rounded-full border-4 border-[#d4af37] shadow-lg object-cover"
         />
