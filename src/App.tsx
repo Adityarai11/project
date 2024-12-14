@@ -2,12 +2,27 @@ import React from 'react';
 import { CircularPrayerPlate } from './components/CircularPrayerPlate';
 import { FallingPetals } from './components/FallingPetals';
 import { weddingData } from './data/weddingData';
+import marriageImg from './img/marriage.jpg'
 
 function App() {
   return (
-    <div className="min-h-screen bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJG_BV3jNJeHzGwdX-MmtzhLmOYABqL6ZYbMO2vMKA09Czj0C')] bg-cover bg-center flex items-center justify-center p-8">
+  <div 
+    style={{
+    minHeight: '100vh',
+    width: '100%',
+    backgroundImage: `url(${marriageImg})`, // Correctly format the backgroundImage
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '2rem'
+  }}
+  >
+
       <FallingPetals />
-      <div className="backdrop-blur-sm bg-white/30 p-12 rounded-3xl shadow-2xl">
+      <div className="backdrop-blur-sm bg-white/30 p-12 rounded-3xl shadow-2xl max-w-[90%] w-auto">
         <CircularPrayerPlate {...weddingData} />
       </div>
     </div>

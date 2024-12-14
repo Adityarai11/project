@@ -1,13 +1,12 @@
 import { WeddingDetails } from '../types/wedding';
 
 export const weddingData: WeddingDetails = {
-  brideNames: "Emily Rose",
-  groomNames: "James Alexander",
-  date: "June 15, 2024",
-  time: "4:00 PM",
-  venue: "The Grand Palace Gardens, 123 Wedding Lane, Celebration City",
-  rsvpDate: "May 1, 2024",
-  dressCode: "Formal Attire - Black Tie Optional",
+  brideNames: "Anjali Rai",
+  groomNames: "Shardendu Shekhar",
+  date: "Jan 19, 2025",
+  time: "7:00 PM",
+  venue: " BIKA BANQUET,RANGOLI MALL,LILIUAH,HOWRAH",
+  
   schedule: [
     {
       time: "4:00 PM",
